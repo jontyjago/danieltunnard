@@ -6,11 +6,11 @@ $lang = $elements[1] ; // For the first segment
 
 if ($lang == "en" ) {
 	$bio = stripslashes(get_option('home-bio-en'));
-	$recent = "Latest Posts";
+	$recent = stripslashes(get_option('latest-en'));
 }
 else {
 	$bio = stripslashes(get_option('home-bio-es'));
-	$recent = "Recien Escribi";
+	$recent = stripslashes(get_option('latest-es'));
 } ?>
 
 <div id="content">

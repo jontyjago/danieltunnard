@@ -56,6 +56,7 @@
 						<div id="contact-icons">
 							
 							<?php 
+							$facebook = stripslashes(get_option('facebook-link'));
 							$twitter = stripslashes(get_option('twitter-link'));
 							$contact = stripslashes(get_option('contact-link')); 
 
@@ -64,8 +65,9 @@
 						    $elements = explode('/', $uri) ;
 						    $lang = $elements[1] ; // For the first segment ?>
 
-							<a href="<?php echo esc_url( $twitter ); ?>" alt="Twitter"><i class="icon-twitter"></i></a>
-							<a href="<?php echo esc_url( $contact ); ?>" alt="Get In Touch" ><i class="icon-envelope"></i></a>
+							<a href="<?php echo esc_url( $facebook ); ?>" alt="Facebook" target="_blank" ><i class="icon-facebook"></i></a>
+							<a href="<?php echo esc_url( $twitter ); ?>" alt="Twitter" target="_blank" ><i class="icon-twitter"></i></a>
+							<a href="<?php echo esc_url( $contact ); ?>" alt="Get In Touch" target="_blank" ><i class="icon-envelope"></i></a>
 							<?php
 							if ($lang == 'en') { ?>
 								<a href="<?php echo esc_url ( site_url() ) . "/es/"; ?>" alt="Espa&ntilde;ol" ><i class="icon-flag"></i></a>

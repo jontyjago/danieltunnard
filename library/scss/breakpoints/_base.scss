@@ -259,6 +259,12 @@ h2.art-title {
 	letter-spacing: 0.05em;
 	padding-top: 0.3em;
 	text-transform: uppercase;
+	a {
+		color: $darkprimarycolor;
+	}
+	a:hover {
+		color: $accentcolor;
+	}
 }
 p.art-tag,
 p.art-date{
@@ -418,6 +424,11 @@ POSTS & CONTENT STYLES
 		.hentry {}          /* hentry class */
 		.category-slug {}   /* style by category (i.e. category-videos) */
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
+		.post-not-found {
+			img {
+				align: center;
+			}
+		}
 
 		/* post meta */
 		.byline {
@@ -435,7 +446,9 @@ POSTS & CONTENT STYLES
 			padding: 1.5em 1.5em 0;
 
 			p {
-				margin: 0 0 1.5em;
+				font-size: 1.2em;
+				line-height: 1.5em;
+				margin: 0 4em 1.5em;
 			}
 
 

@@ -34,10 +34,15 @@ function tunnard_options_page() {
         <p>Espa&ntilde;ol</p>
         <textarea name="home-bio-es" id="home-bio-es" cols=60 rows=6><?php esc_attr_e( get_option( 'home-bio-es' ) ); ?></textarea>
 
+        <h3>Latest Posts</h3>
+        <p>Latest Posts text</p>
+        <p><input type="text" name="latest-en" id="latest-en" size="48" value="<?php esc_attr_e( get_option( 'latest-en' ) ); ?>" required /> English</p>
+        <p><input type="text" name="latest-es" id="latest-es" size="48" value="<?php esc_attr_e( get_option( 'latest-es' ) ); ?>" required /> Espa&ntilde;ol</p>
 
         <h3>Links</h3>
-        <p>The links for the Twitter and Contact icons in the header</p>
+        <p>The links for the Twitter, Facebook and Contact icons in the header</p>
         <p><input type="url" name="twitter-link" id="twitter-link" size="48" value="<?php esc_attr_e( get_option( 'twitter-link' ) ); ?>" required /> Twitter</p>
+        <p><input type="url" name="facebook-link" id="facebook-link" size="48" value="<?php esc_attr_e( get_option( 'facebook-link' ) ); ?>" required /> Facebook</p>
         <p><input type="url" name="contact-link" id="contact-link" size="48" value="<?php esc_attr_e( get_option( 'contact-link' ) ); ?>" required /> Contact</p>
 
         <!-- submit button -->
@@ -51,6 +56,9 @@ function tunnard_options_update() {
 	// this is where validation would go
 	update_option( 'home-bio-en', stripslashes($_POST['home-bio-en']) );
     update_option( 'home-bio-es', stripslashes($_POST['home-bio-es']) );
+    update_option( 'latest-en', stripslashes($_POST['latest-en']) );
+    update_option( 'latest-es', stripslashes($_POST['latest-es']) );
     update_option( 'twitter-link', stripslashes($_POST['twitter-link']) );
+    update_option( 'facebook-link', stripslashes($_POST['facebook-link']) );    
     update_option( 'contact-link', stripslashes($_POST['contact-link']) );
 }
